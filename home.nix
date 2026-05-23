@@ -8,6 +8,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.awww.enable = true;
+
 programs.bash = {
   enable = true;
   bashrcExtra = ''
@@ -44,7 +46,12 @@ ani-cli
 bluejay
 auto-cpufreq
 labwc
-
+quickshell
+upower
+neovim
+tmux
+swww
+hyprpaper
 
 ];
 

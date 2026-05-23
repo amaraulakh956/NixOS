@@ -19,7 +19,7 @@ fuzzel
 waybar
 wofi
 pwvucontrol
- 
+
   ];
 }
 

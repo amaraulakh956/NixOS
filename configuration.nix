@@ -158,6 +158,11 @@ programs.steam = {
   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
 };
 
+programs.hyprland.withUWSM = true;
+programs.hyprland.xwayland.enable = true;
+programs.hyprland.enable = true;
+
+
 #tailscale
 services.tailscale.enable = true;
 

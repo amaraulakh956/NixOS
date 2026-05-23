@@ -15,6 +15,10 @@ programs.bash = {
   '';
 };
 
+programs.bash.shellAliases = {
+  save = "cd ~/myflake && git add . && git commit -m 'update config' && git push";
+};
+
 home.packages = with pkgs; [
 kitty
 fastfetch

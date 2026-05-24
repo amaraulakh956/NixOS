@@ -16,6 +16,8 @@ programs.bash = {
   '';
 };
 
+#home.file.".gtkrc-2.0".force = true;
+
 programs.bash.shellAliases = {
   save = "cd ~/myflake && git add . && git commit -m 'update config' && git push";
 };

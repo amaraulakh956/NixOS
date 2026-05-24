@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib,  ... }:
 
 {
   imports =
@@ -17,9 +17,9 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
 
-sharedModules = [
-    inputs.stylix.homeModules.stylix
-  ];
+#sharedModules = [
+ #   inputs.stylix.homeModules.stylix
+ # ];
 
     users = {
       amar = import ./home.nix;
@@ -135,10 +135,11 @@ hardware.bluetooth = {
   };
 
 #customization
-stylix.enable = false;
-stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-#stylix.image = /path/to/wallpaper     gets colour from wallpaper
+stylix.enable = true;
+#stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gotham.yaml";
+stylix.image = ./wallpaper.jpg;  #/path/to/wallpaper     gets colour from wallpaper
 #stylix.targets.niri.enable = false;
+stylix.targets.qt.enable = false;
 
 systemd.user.services.polkit-gnome-authentication-agent-1 = {
   description = "polkit-gnome-authentication-agent-1";
@@ -224,6 +225,11 @@ systemd.services.flatpak-repo = {
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
  
   ];
+
+environment.variables.QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
+#environment.variables = {
+#  QT_QPA_PLATFORMTHEME = "qt6ct"; # or "kde", "qgnomeplatform", etc.
+#};   
 
   # Some programs need SUID wrappers, can be configured further or are  # started in user sessions.
   # programs.mtr.enable = true;

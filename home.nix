@@ -60,7 +60,13 @@ protonup-ng
 mangohud
 #lutris
 #bottles
-
+lutris-unwrapped
+bottles-unwrapped
+pkgs.kdePackages.qt6ct
+pkgs.libsForQt5.qt5ct
+librepods
+librewolf
+wob
 ];
 
 home.sessionVariables = {

@@ -56,8 +56,17 @@ zoom-us
 brightnessctl
 hypridle
 waypaper
+protonup-ng
+mangohud
+#lutris
+#bottles
 
 ];
+
+home.sessionVariables = {
+	STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
+         "\${HOME}/.steam/root/compatibilitytools.d";
+};
 
 imports = [
     #./desktops/hyprland.nix

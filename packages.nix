@@ -27,6 +27,8 @@ quickshell
 #kdePackages.kiconthemes
 #kdePackages.breeze
 # qt6.qtdeclarative
+#lutris
+#bottles
   ];
 }
 

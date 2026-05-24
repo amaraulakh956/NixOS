@@ -62,7 +62,14 @@ xdg.portal = {
   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 };
   
-hardware.graphics.enable = true;
+#gaming
+hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+
+
+  };
+
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -185,7 +192,13 @@ programs.steam = {
   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
+  gamescopeSession.enable = true;
+  
+}; 
+programs.gamemode.enable = true;
+
+
+
 
 programs.hyprland.withUWSM = true;
 programs.hyprland.xwayland.enable = true;

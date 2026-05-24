@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixpkgsveryold.url = "github:nixos/nixpkgs?ref=nixos-21.11";
     niri.url = "github:sodiboo/niri-flake";
+    stylix.url = "github:danth/stylix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -18,7 +19,7 @@
 
   };
 
-  outputs = {self, nixpkgs, niri,  ... } @ inputs:
+  outputs = {self, nixpkgs, niri, stylix, ... } @ inputs:
 let
 
 
@@ -31,8 +32,12 @@ in
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
      specialArgs = {inherit inputs ; };
       modules =[
-       ./configuration.nix
+        stylix.nixosModules.stylix
         niri.nixosModules.niri
+       ./configuration.nix
+      
+       # inputs.stylix.nixosModules.stylix
+        
      ({pkgs,...}:{
 
        })

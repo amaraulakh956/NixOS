@@ -16,9 +16,15 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
+
+sharedModules = [
+    inputs.stylix.homeModules.stylix
+  ];
+
     users = {
       amar = import ./home.nix;
-  };
+
+};  
 };
 
 
@@ -55,7 +61,7 @@ xdg.portal = {
   enable = true;
   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 };
-   
+  
 hardware.graphics.enable = true;
 
   # Enable networking
@@ -121,7 +127,30 @@ hardware.bluetooth = {
     ];
   };
 
+#customization
+stylix.enable = false;
+stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+#stylix.image = /path/to/wallpaper     gets colour from wallpaper
+#stylix.targets.niri.enable = false;
+
+systemd.user.services.polkit-gnome-authentication-agent-1 = {
+  description = "polkit-gnome-authentication-agent-1";
+  wantedBy = [ "graphical-session.target" ];
+  wants = [ "graphical-session.target" ];
+  after = [ "graphical-session.target" ];
+  serviceConfig = {
+    Type = "simple";
+    ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+    Restart = "on-failure";
+    RestartSec = 1;
+    TimeoutStopSec = 10;
+  };
+};   
+
+home-manager.backupFileExtension = "backup";
+
 nix.settings.experimental-features = ["nix-command" "flakes"];
+nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
 #upgrading packages shortcut
 environment.shellAliases = {

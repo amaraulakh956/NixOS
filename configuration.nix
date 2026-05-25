@@ -145,10 +145,26 @@ hardware.bluetooth = {
 
 #customization
 stylix.enable = true;
-#stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gotham.yaml";
-stylix.image = ./wallpaper.jpg;  #/path/to/wallpaper     gets colour from wallpaper
+stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+#stylix.image = ./wallpaper.jpg;  #/path/to/wallpaper     gets colour from wallpaper
 #stylix.targets.niri.enable = false;
 stylix.targets.qt.enable = false;
+stylix.fonts = {
+  monospace = {
+    package = pkgs.minecraftia;
+    name = "Minecraftia";
+  };
+  sansSerif = {
+    package = pkgs.minecraftia;
+    name = "Minecraftia";
+  };
+  sizes = {
+    terminal = 11;
+    applications = 11;
+    desktop = 11;
+    popups = 11;
+  };
+};
 
 systemd.user.services.polkit-gnome-authentication-agent-1 = {
   description = "polkit-gnome-authentication-agent-1";

@@ -111,8 +111,22 @@ home.sessionVariables = {
     };
   };
 
- 
+ fonts.fontconfig.enable = true;
 
+home.pointerCursor = {
+  gtk.enable = true;
+  name = "Bibata-Modern-Classic";
+  package = pkgs.bibata-cursors;
+  size = 24;
+};
+
+gtk = {
+  enable = true;
+  iconTheme = {
+    name = "Papirus-Dark";
+    package = pkgs.papirus-icon-theme;
+  };
+};
 
 
 imports = [

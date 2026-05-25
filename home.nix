@@ -80,13 +80,13 @@ wob
 pavucontrol
 #inputs.helium.packages.${pkgs.system}.default
  papirus-icon-theme
-  bibata-cursors
-  tela-icon-theme
-  adwaita-icon-theme
-  pkgs.minecraftia
+bibata-cursors
+tela-icon-theme
+adwaita-icon-theme
+pkgs.minecraftia
 nerd-fonts.jetbrains-mono
 alacritty
-
+thunar
 
 ];
 
@@ -114,6 +114,7 @@ home.sessionVariables = {
         "de"
         "wm"
         "theme"
+        "font"
         "cpu"
         "gpu"
         "memory"

@@ -12,6 +12,12 @@
     };
   };
 
+  qt = {
+  enable = true;
+  platformTheme.name = "qtct";
+  style.name = "kvantum";
+};
+
   home.pointerCursor = {
     gtk.enable = true;
     name = "Bibata-Modern-Classic";

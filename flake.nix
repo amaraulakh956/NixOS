@@ -17,6 +17,11 @@
   inputs.nixpkgs.follows = "nixpkgs";
 };
 
+helium = {
+      url = "github:AlvaroParker/helium-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+};
+
   };
 
   outputs = {self, nixpkgs, niri, stylix, ... } @ inputs:

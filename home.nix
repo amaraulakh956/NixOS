@@ -51,7 +51,8 @@ tailscale
 tmux
 upower
 vesktop
-vscode
+#vscode
+vscodium
 winboat
 zoom-us
 #stylix
@@ -69,12 +70,50 @@ pkgs.libsForQt5.qt5ct
 librepods
 librewolf
 wob
+pavucontrol
+#inputs.helium.packages.${pkgs.system}.default
+
 ];
 
 home.sessionVariables = {
 	STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
          "\${HOME}/.steam/root/compatibilitytools.d";
 };
+
+
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo = {
+        source = "nixos_small";
+      };
+      display = {
+        color = "blue";
+      };
+      modules = [
+        "os"
+        "kernel"
+        "uptime"
+        "packages"
+        "shell"
+        "de"
+        "wm"
+        "theme"
+        "cpu"
+        "gpu"
+        "memory"
+        "swap"
+        "battery"
+        "disk"
+        "localip"
+        "locale"
+      ];
+    };
+  };
+
+ 
+
+
 
 imports = [
     #./desktops/hyprland.nix

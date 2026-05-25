@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -21,14 +21,8 @@ playerctl
 hypridle
 fcitx5
 quickshell
-#kdePackages.spectacle
-#kdePackages.kirigami
-#kdePackages.qqc2-desktop-style
-#kdePackages.kiconthemes
-#kdePackages.breeze
-# qt6.qtdeclarative
-#lutris
-#bottles
+ inputs.helium.packages.${system}.default
+hyprpolkitagent
   ];
 }
 

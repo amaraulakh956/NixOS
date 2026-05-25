@@ -59,8 +59,17 @@ nix.settings.auto-optimise-store = true;
 #xdg portal
 xdg.portal = {
   enable = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+ xdgOpenUsePortal = true;
+  extraPortals = [
+ pkgs.xdg-desktop-portal-gtk
+ pkgs.xdg-desktop-portal-hyprland
+ ];
 };
+
+environment.sessionVariables = {
+  XDG_CURRENT_DESKTOP = "Hyprland";
+  XDG_SESSION_TYPE = "wayland";
+};   
   
 #gaming
 hardware.graphics = {

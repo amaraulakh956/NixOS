@@ -23,6 +23,8 @@ fcitx5
 quickshell
  inputs.helium.packages.${system}.default
 hyprpolkitagent
+swayosd #volume and brightness indicator
+
   ];
 }
 

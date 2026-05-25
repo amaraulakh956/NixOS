@@ -16,6 +16,13 @@ programs.bash = {
   '';
 };
 
+imports = [
+  ./desktops/hyprland-theme.nix
+  # ./desktops/plasma-theme.nix
+  #./desktops/niri-theme.nix
+#./desktops/hyprland.nix
+];
+
 #home.file.".gtkrc-2.0".force = true;
 
 programs.bash.shellAliases = {
@@ -72,6 +79,12 @@ librewolf
 wob
 pavucontrol
 #inputs.helium.packages.${pkgs.system}.default
+ papirus-icon-theme
+  bibata-cursors
+  tela-icon-theme
+  adwaita-icon-theme
+  pkgs.minecraftia
+nerd-fonts.jetbrains-mono
 
 ];
 
@@ -113,25 +126,8 @@ home.sessionVariables = {
 
  fonts.fontconfig.enable = true;
 
-home.pointerCursor = {
-  gtk.enable = true;
-  name = "Bibata-Modern-Classic";
-  package = pkgs.bibata-cursors;
-  size = 24;
-};
-
-gtk = {
-  enable = true;
-  iconTheme = {
-    name = "Papirus-Dark";
-    package = pkgs.papirus-icon-theme;
-  };
-};
 
 
-imports = [
-    #./desktops/hyprland.nix
-  ];
 
   home.stateVersion = "25.11";
 }

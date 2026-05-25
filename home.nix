@@ -85,6 +85,8 @@ pavucontrol
   adwaita-icon-theme
   pkgs.minecraftia
 nerd-fonts.jetbrains-mono
+alacritty
+
 
 ];
 

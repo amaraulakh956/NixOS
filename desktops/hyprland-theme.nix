@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   gtk = {
     enable = true;
-    font = {
+    font =lib.mkForce {
       name = "Minecraftia";
       size = 11;
     };
@@ -18,4 +18,5 @@
     package = pkgs.bibata-cursors;
     size = 24;
   };
+  dconf.settings."org/gnome/desktop/interface".font-name = lib.mkForce "Minecraftia 11";
 }

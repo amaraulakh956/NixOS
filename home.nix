@@ -32,7 +32,6 @@ programs.bash.shellAliases = {
 home.packages = with pkgs; [
 ani-cli
 auto-cpufreq
-bluejay
 brave
 fastfetch
 feishin
@@ -87,6 +86,9 @@ pkgs.minecraftia
 nerd-fonts.jetbrains-mono
 alacritty
 thunar
+blueman
+bluejay
+bluebubbles
 
 ];
 

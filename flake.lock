@@ -403,7 +403,8 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgsveryold": "nixpkgsveryold",
         "quickshell": "quickshell",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "zen-browser": "zen-browser"
       }
     },
     "stylix": {
@@ -561,6 +562,26 @@
       "original": {
         "owner": "Supreeeme",
         "repo": "xwayland-satellite",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779773014,
+        "narHash": "sha256-4bQ5dL7zbP2vKu5kfsEJICxGG3ATsOW7sP2QvaXGkHM=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "3ff570b75cf068b0f25d0c2b3a77a0e546a4067b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

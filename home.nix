@@ -89,6 +89,7 @@ thunar
 blueman
 bluejay
 bluebubbles
+localsend
 
 ];
 

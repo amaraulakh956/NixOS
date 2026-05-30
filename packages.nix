@@ -27,7 +27,10 @@ swayosd #volume and brightness indicator
 inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 wev
 
-
+#GNOME section
+   # gnomeExtensions.blur-my-shell
+    #gnomeExtensions.just-perfection
+    #gnomeExtensions.arc-menu
   ];
 }
 

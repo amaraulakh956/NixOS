@@ -3,7 +3,7 @@
   gtk = {
     enable = true;
     font =lib.mkForce {
-      name = "Minecraftia";
+      name = "Ubuntu Regular"; #used to be minecraftia
       size = 11;
     };
     iconTheme = {

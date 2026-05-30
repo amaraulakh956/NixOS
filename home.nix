@@ -91,6 +91,7 @@ bluejay
 bluebubbles
 localsend
 claude-code
+pkgs.kdePackages.ark
 
 ];
 

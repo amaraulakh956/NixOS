@@ -14,6 +14,7 @@
       ./desktops/niri.nix
       ./desktops/plasma.nix
       ./desktops/gnome.nix
+      ./desktops/cinnamon.nix
     ];
 
   home-manager = {

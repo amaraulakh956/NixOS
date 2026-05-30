@@ -12,6 +12,7 @@
        ./packages.nix
       ./desktops/hyprland.nix 
       ./desktops/niri.nix
+      ./desktops/plasma.nix
     ];
 
   home-manager = {
@@ -101,7 +102,7 @@ hardware.bluetooth = {
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  #services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -180,6 +181,7 @@ nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 environment.shellAliases = {
   rebuild = "sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
   update = "sudo nix flake update /home/amar/myflake && sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
+  garbage = "sudo nix-collect-garbage -d";
 };
 
   # Install firefox.

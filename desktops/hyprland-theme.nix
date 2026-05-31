@@ -24,5 +24,5 @@
     package = pkgs.bibata-cursors;
     size = 24;
   };
-  dconf.settings."org/gnome/desktop/interface".font-name = lib.mkForce "Minecraftia 11";
+  dconf.settings."org/gnome/desktop/interface".font-name = lib.mkForce "Ubuntu Regular 11";
 }

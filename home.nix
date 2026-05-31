@@ -92,6 +92,7 @@ bluebubbles
 localsend
 claude-code
 pkgs.kdePackages.ark
+vivaldi
 
 ];
 

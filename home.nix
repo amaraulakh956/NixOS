@@ -17,7 +17,7 @@ programs.bash = {
 };
 
 imports = [
-  ./desktops/hyprland-theme.nix
+  #./desktops/hyprland-theme.nix
   # ./desktops/plasma-theme.nix
   #./desktops/niri-theme.nix
 #./desktops/hyprland.nix
@@ -32,7 +32,6 @@ programs.bash.shellAliases = {
 home.packages = with pkgs; [
 ani-cli
 auto-cpufreq
-brave
 fastfetch
 feishin
 gearlever
@@ -92,7 +91,8 @@ bluebubbles
 localsend
 claude-code
 pkgs.kdePackages.ark
-vivaldi
+brave
+onboard
 
 ];
 

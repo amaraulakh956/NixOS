@@ -21,7 +21,7 @@ playerctl
 hypridle
 fcitx5
 quickshell
- inputs.helium.packages.${system}.default
+ #inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
 hyprpolkitagent
 swayosd #volume and brightness indicator
 inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

@@ -56,8 +56,7 @@ tailscale
 tmux
 upower
 vesktop
-#vscode
-vscodium
+vscode
 winboat
 zoom-us
 #stylix
@@ -68,8 +67,8 @@ protonup-ng
 mangohud
 #lutris
 #bottles
-lutris-unwrapped
-bottles-unwrapped
+#lutris-unwrapped
+#bottles-unwrapped
 pkgs.kdePackages.qt6ct
 pkgs.libsForQt5.qt5ct
 librepods
@@ -93,6 +92,10 @@ claude-code
 pkgs.kdePackages.ark
 brave
 onboard
+obsidian
+proton-vpn
+bitwarden-desktop
+
 
 ];
 

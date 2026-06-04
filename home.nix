@@ -95,7 +95,8 @@ onboard
 obsidian
 proton-vpn
 bitwarden-desktop
-
+termius
+freecad
 
 ];
 
@@ -109,7 +110,7 @@ home.sessionVariables = {
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        source = "nixos_medium";
       };
       display = {
         color = "blue";

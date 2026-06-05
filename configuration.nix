@@ -30,6 +30,7 @@
 };  
 };
 
+security.pki.certificateFiles = [ ./caddy-root.crt ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;

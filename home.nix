@@ -97,6 +97,7 @@ proton-vpn
 bitwarden-desktop
 termius
 freecad
+gnome-terminal
 
 ];
 

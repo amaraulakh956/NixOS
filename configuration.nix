@@ -31,6 +31,19 @@
 };
 
 security.pki.certificateFiles = [ ./caddy-root.crt ];
+networking.nameservers = [ "100.64.0.2" ];
+
+services.ollama = {
+  enable = true;
+    host = "0.0.0.0";
+  environmentVariables = {
+    OLLAMA_VULKAN = "1";
+  };
+};
+
+networking.firewall.extraCommands = ''
+  iptables -I INPUT -s 172.19.0.0/24 -p tcp --dport 11434 -j ACCEPT
+'';
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;

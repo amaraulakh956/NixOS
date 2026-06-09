@@ -9,6 +9,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
+ nixpkgs.config.permittedInsecurePackages = [
+  "electron-39.8.10"
+];
+
 programs.bash = {
   enable = true;
   bashrcExtra = ''
@@ -94,11 +98,12 @@ brave
 onboard
 obsidian
 proton-vpn
-bitwarden-desktop
+#bitwarden-desktop
 termius
 freecad
 gnome-terminal
-
+loupe
+vlc
 ];
 
 home.sessionVariables = {

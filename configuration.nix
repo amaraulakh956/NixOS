@@ -195,9 +195,12 @@ nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 #upgrading packages shortcut
 environment.shellAliases = {
   rebuild = "sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
-  update = "sudo nix flake update /home/amar/myflake && sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
+  #update = "sudo nix flake update /home/amar/myflake && sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
+  update = "sudo nix flake update && sudo nixos-rebuild switch --flake";
   garbage = "sudo nix-collect-garbage -d";
 };
+
+  
 
   # Install firefox.
   programs.firefox.enable = false;

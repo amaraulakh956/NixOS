@@ -2,7 +2,7 @@
 
 {
   services.displayManager.gdm.enable = false;
-  services.desktopManager.gnome.enable = false;
+  services.desktopManager.gnome.enable = true;
 
   # To disable installing GNOME's suite of applications
   # and only be left with GNOME shell.

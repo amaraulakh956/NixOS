@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
- services.xserver.desktopManager.cinnamon.enable = true;
+ services.xserver.desktopManager.cinnamon.enable = false;
  services.xserver.displayManager.lightdm.enable = true;
  
  services.logind = {

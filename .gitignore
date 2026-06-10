@@ -1,2 +1,3 @@
 .nextcloudsync.log
 .sync-*
+.caddy-root.crt

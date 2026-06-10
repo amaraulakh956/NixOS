@@ -47,8 +47,6 @@ kicad
 kitty
 labwc
 libreoffice-fresh
-neovim
-netbeans
 nextcloud-client
 nixd
 qbittorrent
@@ -60,7 +58,7 @@ tailscale
 tmux
 upower
 vesktop
-vscode
+vscodium
 winboat
 zoom-us
 #stylix
@@ -104,6 +102,7 @@ freecad
 gnome-terminal
 loupe
 vlc
+virt-manager
 ];
 
 home.sessionVariables = {

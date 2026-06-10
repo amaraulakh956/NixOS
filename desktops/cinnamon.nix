@@ -2,7 +2,7 @@
 
 {
  services.xserver.desktopManager.cinnamon.enable = false;
- services.xserver.displayManager.lightdm.enable = true;
+ services.xserver.displayManager.lightdm.enable = false;
  
  services.logind = {
     lidSwitch = "suspend";

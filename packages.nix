@@ -26,6 +26,7 @@ hyprpolkitagent
 swayosd #volume and brightness indicator
 inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 wev
+dnsmasq 
 
 #GNOME section
    # gnomeExtensions.blur-my-shell

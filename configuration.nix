@@ -44,6 +44,7 @@ services.ollama = {
 networking.firewall.extraCommands = ''
   iptables -I INPUT -s 172.19.0.0/24 -p tcp --dport 11434 -j ACCEPT
 '';
+networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -150,7 +151,7 @@ hardware.bluetooth = {
   users.users.amar = {
     isNormalUser = true;
     description = "Amar Aulakh";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd"];
     packages = with pkgs; [
       kdePackages.kate
       kdePackages.filelight
@@ -209,6 +210,9 @@ environment.shellAliases = {
   virtualisation.docker.enable = true;
   #users.users.amar.extraGroups = [ "docker" ];
   virtualisation.docker.enableOnBoot = true;
+
+virtualisation.libvirtd.enable = true;
+programs.virt-manager.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -58,7 +58,7 @@ tailscale
 tmux
 upower
 vesktop
-vscodium
+vscode
 winboat
 zoom-us
 #stylix
@@ -103,6 +103,8 @@ gnome-terminal
 loupe
 vlc
 virt-manager
+nicotine-plus
+
 ];
 
 home.sessionVariables = {

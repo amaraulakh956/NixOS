@@ -199,6 +199,9 @@ environment.shellAliases = {
   #update = "sudo nix flake update /home/amar/myflake && sudo nixos-rebuild switch --flake /home/amar/myflake#nixos";
   update = "sudo nix flake update && sudo nixos-rebuild switch --flake";
   garbage = "sudo nix-collect-garbage -d";
+  conservation = "echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode";
+  normal = "echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode";
+  refresh = "kbuildsycoca6";
 };
 
   

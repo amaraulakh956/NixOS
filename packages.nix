@@ -27,7 +27,12 @@ swayosd #volume and brightness indicator
 inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 wev
 dnsmasq 
-
+pkgs.wl-clipboard 
+wine-wayland
+wine64
+fuse-overlayfs
+winetricks
+bottles
 #GNOME section
    # gnomeExtensions.blur-my-shell
     #gnomeExtensions.just-perfection

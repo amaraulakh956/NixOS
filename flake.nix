@@ -15,16 +15,16 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    brave-origin.url = "github:amaraulakh956/brave-origin-flake";
   };
 
-  outputs = { self, nixpkgs, niri, ... } @ inputs:
-  let
-  in
+  outputs = { self, nixpkgs, niri, brave-origin, ... } @ inputs:
   {
     packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;

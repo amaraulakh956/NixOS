@@ -20,6 +20,8 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
 
+  
+
 #sharedModules = [
  #   inputs.stylix.homeModules.stylix
  # ];
@@ -29,6 +31,8 @@
 
 };  
 };
+
+boot.kernelPackages = pkgs.linuxPackages_latest;  
 
 security.pki.certificateFiles = [ ./caddy-root.crt ];
 networking.nameservers = [ "100.64.0.2" ];
@@ -45,6 +49,13 @@ networking.firewall.extraCommands = ''
   iptables -I INPUT -s 172.19.0.0/24 -p tcp --dport 11434 -j ACCEPT
 '';
 networking.firewall.trustedInterfaces = [ "virbr0" ];
+
+
+  virtualisation.waydroid.enable = true;
+  # Newer kernel versions may need
+  virtualisation.waydroid.package = pkgs.waydroid-nftables;
+
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -264,10 +275,7 @@ systemd.services.flatpak-repo = {
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
- 
-  ];
+  
 
 environment.variables.QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
 #environment.variables = {

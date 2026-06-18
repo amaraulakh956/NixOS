@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1781809023,
-        "narHash": "sha256-AqGezdcpZCkxMDFe2XYQyL317AB6euk2EBLHJOw2h20=",
+        "lastModified": 1781809658,
+        "narHash": "sha256-F7hTVpUKyyeAbfLhbJtOKtgMaHNSARRzdckAYHOFnxU=",
         "owner": "amaraulakh956",
         "repo": "brave-origin-flake",
-        "rev": "19c45801f85b5955620dc7c1cc435bc1b2197bc7",
+        "rev": "1cb0c119acd3efe8d5856baca54acb397c9b67ad",
         "type": "github"
       },
       "original": {
